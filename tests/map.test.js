@@ -8,5 +8,10 @@ describe("map", () => {
     expect(map(cb, arr_string)).toEqual(["1a", "2a", "3a"]);
     expect(map(cb)(arr_string)).toEqual(["1a", "2a", "3a"]);
     expect(map(__)(cb)(arr_string)).toEqual(["1a", "2a", "3a"]);
+    expect(map((x, index) => x + index, ["a", "b", "c"])).toEqual([
+      "a0",
+      "b1",
+      "c2"
+    ]);
   });
 });

@@ -8,9 +8,11 @@ describe("map", () => {
     const fakeConsole = {
       log: jest.fn()
     };
-    const cb = x => fakeConsole.log(x);
+    const cb = (x, index) => fakeConsole.log(x, index);
     forEach(cb, arr_string);
     expect(fakeConsole.log).toHaveBeenCalledTimes(arr_string.length);
-    expect(fakeConsole.log.mock.calls).toEqual(map(x => [x], arr_string));
+    expect(fakeConsole.log.mock.calls).toEqual(
+      map((x, index) => [x, index], arr_string)
+    );
   });
 });

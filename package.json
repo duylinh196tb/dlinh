@@ -1,10 +1,11 @@
 {
   "name": "dlinh",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Function programing",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "jest ./tests",
+    "test": "jest ./tests --watchAll",
+    "coverage": "jest ./tests --coverage CI=true",
     "build": "babel src --out-dir ./dist --source-maps"
   },
   "repository": {

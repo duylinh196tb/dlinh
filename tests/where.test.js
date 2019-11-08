@@ -9,10 +9,12 @@ describe("where", () => {
     expect(where({ a: lt(__, 2), b: gt(__, 1), c: true }, testObj)).toEqual(
       true
     );
-    expect(where({ a: lt(__, 2), b: gt(__, 1) })(testObj)).toEqual(true);
-    expect(where({ a: 1, b: 2 }, testObj)).toEqual(true);
+    expect(where({ a: lt(__, 2), b: gt(__, 1) })(testObj)).toBeTruthy();
+    expect(where({ a: 1, b: 2 }, testObj)).toBeTruthy();
     //
-    expect(where({ a: lt(__, 1), b: gt(__, 1) })(testObj)).toEqual(false);
-    expect(where({ a: 1, b: 3 }, testObj)).toEqual(false);
+    expect(where({ a: lt(__, 1), b: gt(__, 1) })(testObj)).toBeFalsy();
+    expect(where({ a: 1, b: 3 }, testObj)).toBeFalsy();
+    //
+    expect(where({ d: 1 }, testObj)).toBeFalsy();
   });
 });
