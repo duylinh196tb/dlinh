@@ -1,6 +1,6 @@
 export { default as __ } from "./__";
 export { default as add } from "./add";
-export { default as devide } from "./devide";
+export { default as divide } from "./divide";
 export { default as filter } from "./filter";
 export { default as forEach } from "./forEach";
 export { default as gt } from "./gt";
