@@ -1,0 +1,14 @@
+language: node_js
+
+before_install:
+  - npm install
+
+script:
+  - npm run test CI=true --coverage
+# sudo: required
+# services:
+#   - docker
+# before_install:
+#   - docker build -t dlinh/react -f Dockerfile.dev .
+# script:
+#   - docker run -e CI=true dlinh/react npm run test -- --coverage
