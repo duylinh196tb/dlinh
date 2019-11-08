@@ -5,7 +5,7 @@ before_install:
   - npm install
 
 script:
-  - npm run test CI=true --coverage
+  - npm run coverage
 # sudo: required
 # services:
 #   - docker
